@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import classnames from "classnames";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import TextFieldGroup from "../common/TextFieldGroup";
@@ -67,6 +66,7 @@ class Register extends Component {
                 <TextFieldGroup
                   placeholder="Name"
                   name="name"
+                  autoComplete="username"
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
@@ -75,15 +75,17 @@ class Register extends Component {
                   placeholder="Email Address"
                   name="email"
                   type="email"
+                  autoComplete="username"
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
-                  info="This iste uses Gavatar so if you want a profile image, use a Gravatar email"
+                  info="This site uses Gavatar so if you want a profile image, use a Gravatar email"
                 />
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"
                   type="password"
+                  autocomplete="current-password"
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
@@ -93,6 +95,7 @@ class Register extends Component {
                   placeholder="Confirm Password"
                   name="password2"
                   type="password"
+                  autocomplete="current-password"
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
