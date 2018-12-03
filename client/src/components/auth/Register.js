@@ -75,7 +75,7 @@ class Register extends Component {
                   placeholder="Email Address"
                   name="email"
                   type="email"
-                  autoComplete="username"
+                  autoComplete="email"
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
@@ -85,7 +85,7 @@ class Register extends Component {
                   placeholder="Password"
                   name="password"
                   type="password"
-                  autocomplete="current-password"
+                  autoComplete="new-password"
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
@@ -95,7 +95,7 @@ class Register extends Component {
                   placeholder="Confirm Password"
                   name="password2"
                   type="password"
-                  autocomplete="current-password"
+                  autoComplete="new-password"
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
