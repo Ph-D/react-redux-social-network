@@ -39,7 +39,7 @@ router.get(
 );
 
 // @route  GET api/profile/all
-// @desc   Get all profile
+// @desc   Get all profiles
 // @access Public
 router.get("/all", (req, res) => {
   const errors = {};

@@ -83,7 +83,8 @@ class EditProfile extends Component {
         bio: profile.bio,
         twitter: profile.twitter,
         facebook: profile.facebook,
-        youtube: profile.youtube
+        youtube: profile.youtube,
+        instagram: profile.instagram
       });
     }
   }

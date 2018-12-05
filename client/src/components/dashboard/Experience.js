@@ -37,11 +37,12 @@ class Experience extends Component {
         <h4 className="mb-4">Experience Credientials</h4>
         <table className="table">
           <thead>
-            <th>Company</th>
-            <th>Title</th>
-            <th>Years</th>
-            <th />
-            <tr />
+            <tr>
+              <th>Company</th>
+              <th>Title</th>
+              <th>Years</th>
+              <th />
+            </tr>
             {experience}
           </thead>
         </table>
