@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import ProfileHeader from "./ProfileHeader";
-import ProfileCreds from "./ProfileCreds";
 import ProfileAbout from "./ProfileAbout";
+import ProfileCreds from "./ProfileCreds";
 import ProfileGithub from "./ProfileGithub";
-import { getProfileByHandle } from "../../actions/profileActions";
 import Spinner from "../common/Spinner";
+import { getProfileByHandle } from "../../actions/profileActions";
 
 class Profile extends Component {
   componentDidMount() {
@@ -17,10 +17,11 @@ class Profile extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.profile.profile === null && this.props.props.loading) {
+    if (nextProps.profile.profile === null && this.props.profile.loading) {
       this.props.history.push("/not-found");
     }
   }
+
   render() {
     const { profile, loading } = this.props.profile;
     let profileContent;
@@ -45,7 +46,7 @@ class Profile extends Component {
             experience={profile.experience}
           />
           {profile.githubusername ? (
-            <ProfileGithub username={profile.ProfileGithub} />
+            <ProfileGithub username={profile.githubusername} />
           ) : null}
         </div>
       );
