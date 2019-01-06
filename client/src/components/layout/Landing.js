@@ -12,24 +12,34 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <div className="dark-overlay landing-inner text-light">
+        <div className="landing-inner text-light">
           <div className="container">
-            <div className="row">
-              <div className="col-md-12 text-center">
-                <h1 className="display-3 mb-4">Developer Connector</h1>
-                <p className="lead">
-                  Create a developer profile/portfolio, share posts and get help
-                  from other developers
+            <section class="jumbotron text-center">
+              <div class="container">
+                <h1
+                  style={{
+                    "border-bottom": "5px solid #3b5998",
+                    "padding-bottom": "15px"
+                  }}
+                  class="jumbotron-heading font-weight-bold fb-title"
+                >
+                  The DEVbook{" { }"}
+                </h1>
+
+                <p class="lead text-muted">Social media for Web Developers.</p>
+                <p>
+                  <Link to="/register" class="btn btn-lg blue-fb my-2 mr-2">
+                    Sign up
+                  </Link>
+                  <Link
+                    to="/login"
+                    class="btn btn-lg blue-fb-secondary my-2 mr-2"
+                  >
+                    Signin
+                  </Link>
                 </p>
-                <hr />
-                <Link to="/register" className="btn btn-lg btn-info mr-2">
-                  Sign Up
-                </Link>
-                <Link to="/login" className="btn btn-lg btn-light">
-                  Login
-                </Link>
               </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>

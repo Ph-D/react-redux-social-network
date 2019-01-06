@@ -4,29 +4,14 @@ img {
 
 .landing {
   position: relative;
-  background: url("./img/showcase.jpg") no-repeat;
-  background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 80vh;
   margin-top: -24px;
   margin-bottom: -50px;
 }
 
 .landing-inner {
-  padding-top: 80px;
-}
-
-.dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card-form {
-  opacity: 0.9;
+  padding-top: 150px;
 }
 
 .latest-profiles-img {
@@ -36,4 +21,58 @@ img {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+.btn-toolbar {
+  margin: 100 auto;
+}
+
+.fb-title,
+.fa-user-circle,
+.fa-user-tie,
+.fa-university {
+  color: #3b5998;
+}
+
+.fb-border {
+  border: 2px solid #bbb;
+  border-radius: 0.2rem;
+}
+
+.fb-border:hover {
+  border: 2px solid #3b5998;
+  border-radius: 0.2rem;
+}
+
+.blue-fb {
+  color: #fff;
+  background-color: #3b5998;
+  border-radius: 0.2rem;
+}
+
+.blue-fb:hover {
+  background: #8b9dc3;
+  color: #fff;
+}
+
+.blue-fb-secondary {
+  background: #8b9dc3;
+  border: 1px solid #8b9dc3;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.blue-fb-secondary:hover {
+  background: #8b9dc3;
+  color: white;
+}
+
+.register,
+.login,
+.dashboard {
+  margin-top: 80px;
+}
+
+.profileAction-btn {
+  display: flex;
 }

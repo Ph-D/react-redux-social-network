@@ -31,10 +31,13 @@ class Dashboard extends Component {
         dashboardContent = (
           <div>
             <p className="lead text-muted">
-              Welcome <Link to={`/profile/${profile.handle}`}>{user.name}</Link>
+              Welcome <span className="font-weight-bold">{user.name}</span>
             </p>
             <ProfileActions />
+            <h4 className="mb-4">Experience Credientials</h4>
             <Experience experience={profile.experience} />
+            <h4 className="mb-4">Education Credentials</h4>
+
             <Education education={profile.education} />
 
             <div style={{ marginBottom: "60px" }} />
@@ -49,10 +52,12 @@ class Dashboard extends Component {
       } else {
         // User is logged in but has no profile
         dashboardContent = (
-          <div>
-            <p className="lead text-muted">Welcome {user.name}</p>
+          <div className="lead text-muted">
+            <p>
+              Welcome <span className="font-weight-bold">{user.name}</span>
+            </p>
             <p>You have not yet setup a profile, please add some info</p>
-            <Link to="/create-profile" className="btn btn-lg btn-info">
+            <Link to="/create-profile" className="btn  blue-fb btn-block mt-4">
               Create Profile
             </Link>
           </div>
@@ -64,8 +69,10 @@ class Dashboard extends Component {
       <div className="dashboard">
         <div className="container">
           <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4">Dashboard</h1>
+            <div className="col-md-12 m-auto jumbotron jumbo text-center">
+              <h1 className="display-4 font-weight-bold fb-title text-center">
+                Dashboard
+              </h1>
               {dashboardContent}
             </div>
           </div>

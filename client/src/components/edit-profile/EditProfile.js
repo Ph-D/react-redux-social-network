@@ -184,11 +184,13 @@ class EditProfile extends Component {
       <div className="create-profile">
         <div className="container">
           <div className="row" />
-          <div className="col-md-8 m-auto">
-            <Link to="/dashboard" className="btn btn-ligth">
+          <div className="col-md-8 m-auto jumbotron jumbo">
+            <Link to="/dashboard" className="btn btn-light fb-border">
               Go Back
             </Link>
-            <h1 className="display-4 text-center">Edit Profile</h1>
+            <h1 className="font-weight-bold fb-title text-center mb-5">
+              Edit Profile
+            </h1>
             <small className="d-block pb-3">* = required fields</small>
             <form onSubmit={this.onSubmit}>
               <TextFieldGroup
@@ -265,7 +267,7 @@ class EditProfile extends Component {
                       displaySocialInputs: !prevState.displaySocialInputs
                     }));
                   }}
-                  className="btn btn-light"
+                  className="btn btn-light fb-border"
                 >
                   Add Social Network Links
                 </button>
@@ -275,7 +277,7 @@ class EditProfile extends Component {
               <input
                 type="submit"
                 value="Submit"
-                className="btn btn-info btn-block mt-4"
+                className="btn blue-fb btn-block mt-4"
               />
             </form>
           </div>

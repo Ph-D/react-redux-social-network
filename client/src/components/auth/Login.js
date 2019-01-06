@@ -52,14 +52,12 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login">
+      <div className="dark-bg login text-light">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">
-                Sign in to your DevConnector account
-              </p>
+            <div className="col-md-8 m-auto jumbotron jumbo">
+              <h1 className="font-weight-bold fb-title text-center">Log In</h1>
+              <p className="lead text-center text-muted">Sign in to DEVbook</p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
                   placeholder="Email Address"
@@ -81,7 +79,7 @@ class Login extends Component {
                   error={errors.password}
                 />
 
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <input type="submit" className="btn blue-fb btn-block mt-4" />
               </form>
             </div>
           </div>
