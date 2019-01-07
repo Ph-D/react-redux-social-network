@@ -52,34 +52,42 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="dark-bg login text-light">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto jumbotron jumbo">
-              <h1 className="font-weight-bold fb-title text-center">Log In</h1>
-              <p className="lead text-center text-muted">Sign in to DEVbook</p>
+      <div className='dark-bg login text-light'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-8 m-auto jumbotron'>
+              <h1 className='font-weight-bold fb-title text-center'>
+                Connexion
+              </h1>
+              <p className='lead text-center text-muted'>
+                Se connecter a DEVbook
+              </p>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Email Address"
-                  name="email"
-                  autoComplete="username"
-                  type="email"
+                  placeholder='Email'
+                  name='email'
+                  autoComplete='username'
+                  type='email'
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
                 />
 
                 <TextFieldGroup
-                  placeholder="Password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
+                  placeholder='Password'
+                  name='password'
+                  type='password'
+                  autoComplete='current-password'
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
                 />
 
-                <input type="submit" className="btn blue-fb btn-block mt-4" />
+                <input
+                  value='Valider'
+                  type='submit'
+                  className='btn blue-fb btn-block mt-4'
+                />
               </form>
             </div>
           </div>

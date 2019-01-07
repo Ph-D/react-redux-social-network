@@ -62,83 +62,85 @@ class AddExperience extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="add-experience">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-ligth">
-                Go Back
+      <div className='add-experience'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-8 m-auto jumbotron'>
+              <Link to='/dashboard' className='btn btn-light fb-border'>
+                Retour
               </Link>
-              <h1 className="display-4 text-center">Add Experience</h1>
-              <p className="lead text-center">
-                Add any job or position that you have had in the past or current
+              <h1 className='font-weight-bold fb-title text-center mb-5'>
+                Ajouter Expérience
+              </h1>
+              <p className='lead text-center'>
+                Indiquez vos différentes expériences (emploi, mission)
               </p>
-              <small className="d-block pb-3">*= required fields</small>
+              <small className='d-block pb-3'>*= champs requis</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="company"
-                  name="company"
+                  placeholder='Entreprise'
+                  name='company'
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
                 />
                 <TextFieldGroup
-                  placeholder="Job Title"
-                  name="title"
+                  placeholder='Intitulé du Poste'
+                  name='title'
                   value={this.state.title}
                   onChange={this.onChange}
-                  error={errors.company}
+                  error={errors.title}
                 />
                 <TextFieldGroup
-                  placeholder="Location"
-                  name="location"
+                  placeholder='Lieu'
+                  name='location'
                   value={this.state.location}
                   onChange={this.onChange}
                   error={errors.location}
                 />
-                <h6>From Date</h6>
+                <h6>A partir du</h6>
                 <TextFieldGroup
-                  name="from"
-                  type="date"
+                  name='from'
+                  type='date'
                   value={this.state.from}
                   onChange={this.onChange}
                   error={errors.from}
                 />
-                <h6>To Date</h6>
+                <h6>Jusqu'au</h6>
                 <TextFieldGroup
-                  name="to"
-                  type="date"
+                  name='to'
+                  type='date'
                   value={this.state.to}
                   onChange={this.onChange}
                   error={errors.to}
                   disabled={this.state.disabled ? "disabled" : ""}
                 />
-                <div className="form-check mb-4">
+                <div className='form-check mb-4'>
                   <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name="current"
+                    type='checkbox'
+                    className='form-check-input'
+                    name='current'
                     value={this.state.current}
                     checked={this.state.current}
                     onChange={this.onCheck}
-                    id="current"
+                    id='current'
                   />
-                  <label htmlFor="current" className="form-check-label">
-                    Current Job
+                  <label htmlFor='current' className='form-check-label'>
+                    Emploi actuel
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="Job Descritpion"
-                  name="description"
+                  placeholder='Description du poste'
+                  name='description'
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the position"
+                  info='Décrivez votre expérience'
                 />
                 <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  type='submit'
+                  value='Valider'
+                  className='btn blue-fb btn-block mt-4'
                 />
               </form>
             </div>

@@ -22,20 +22,20 @@ class Profiles extends Component {
           <ProfileItem key={profile._id} profile={profile} />
         ));
       } else {
-        profileItems = <h4>No profiles found...</h4>;
+        profileItems = <h4>Aucun Profile...</h4>;
       }
     }
 
     return (
-      <div className="profiles">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <h1 className="display-4 text-center">Developer Profiles</h1>
-              <p className="lead text-center">
-                Browse and connect with developers
-              </p>
-              <div class="row">{profileItems}</div>
+      <div className='profiles'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12 m-auto jumbotron jumbo'>
+              <h1 className='display-5 font-weight-bold fb-title text-center'>
+                Développeurs
+              </h1>
+              <p className='lead text-center'>Parcourir les profils</p>
+              <div className='card-columns'>{profileItems}</div>
             </div>
           </div>
         </div>

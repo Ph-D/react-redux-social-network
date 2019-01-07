@@ -7,11 +7,11 @@ module.exports = function validatePostInput(data) {
   data.text = !isEmpty(data.text) ? data.text : "";
 
   if (!Validator.isLength(data.text, { min: 10, max: 300 })) {
-    errors.text = "Post must be between 10 and 300 characters";
+    errors.text = "Votre post doit comporté entre 10 et 300 charactères";
   }
 
   if (Validator.isEmpty(data.text)) {
-    errors.text = "Text field is required";
+    errors.text = "Précisez champ texte";
   }
 
   return {

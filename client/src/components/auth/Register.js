@@ -54,54 +54,60 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="register">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto jumbotron jumbo">
-              <h1 className="font-weight-bold fb-title text-center">Sign Up</h1>
-              <p className="lead text-center text-muted">
-                Create your DEVbook account
+      <div className='register'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-8 m-auto jumbotron'>
+              <h1 className='font-weight-bold fb-title text-center'>
+                Inscription
+              </h1>
+              <p className='lead text-center text-muted'>
+                Créez votre compte DEVbook
               </p>
               <form noValidate onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="Name"
-                  name="name"
-                  autoComplete="username"
+                  placeholder='Nom'
+                  name='name'
+                  autoComplete='username'
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
                 />
                 <TextFieldGroup
-                  placeholder="Email Address"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
+                  placeholder='Email'
+                  name='email'
+                  type='email'
+                  autoComplete='email'
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
-                  info="This site uses Gavatar so if you want a profile image, use a Gravatar email"
+                  info='Image profil génerer par Gravatar'
                 />
                 <TextFieldGroup
-                  placeholder="Password"
-                  name="password"
-                  type="password"
-                  autoComplete="new-password"
+                  placeholder='Password'
+                  name='password'
+                  type='password'
+                  autoComplete='new-password'
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
                 />
 
                 <TextFieldGroup
-                  placeholder="Confirm Password"
-                  name="password2"
-                  type="password"
-                  autoComplete="new-password"
+                  placeholder='Confimation Password'
+                  name='password2'
+                  type='password'
+                  autoComplete='new-password'
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
                 />
 
-                <input type="submit" className="btn  blue-fb btn-block mt-4" />
+                <input
+                  value='Valider'
+                  type='submit'
+                  className='btn  blue-fb btn-block mt-4'
+                />
               </form>
             </div>
           </div>

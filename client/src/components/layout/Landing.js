@@ -11,31 +11,33 @@ class Landing extends Component {
   }
   render() {
     return (
-      <div className="landing">
-        <div className="landing-inner text-light">
-          <div className="container">
-            <section class="jumbotron text-center">
-              <div class="container">
+      <div className='landing'>
+        <div className='landing-inner text-light'>
+          <div className='container'>
+            <section className='jumbotron text-center'>
+              <div className='container'>
                 <h1
                   style={{
                     "border-bottom": "5px solid #3b5998",
                     "padding-bottom": "15px"
                   }}
-                  class="jumbotron-heading font-weight-bold fb-title"
+                  className='jumbotron-heading font-weight-bold fb-title'
                 >
                   The DEVbook{" { }"}
                 </h1>
 
-                <p class="lead text-muted">Social media for Web Developers.</p>
+                <p className='lead text-muted'>
+                  Réseau social pour développeurs.
+                </p>
                 <p>
-                  <Link to="/register" class="btn btn-lg blue-fb my-2 mr-2">
-                    Sign up
+                  <Link to='/register' class='btn btn-lg blue-fb my-2 mr-2'>
+                    Inscription
                   </Link>
                   <Link
-                    to="/login"
-                    class="btn btn-lg blue-fb-secondary my-2 mr-2"
+                    to='/login'
+                    className='btn btn-lg blue-fb-secondary my-2 mr-2'
                   >
-                    Signin
+                    Connexion
                   </Link>
                 </p>
               </div>

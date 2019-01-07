@@ -31,32 +31,33 @@ class Profile extends Component {
     } else {
       profileContent = (
         <div>
-          <div className="row">
-            <div className="col-md-6">
-              <Link to="/profiles" className="btn btn-light mb-3 float-left">
-                Back To Profiles
+          <div className='row'>
+            <div className='col-md-6'>
+              <Link to='/profiles' className='btn btn-light mb-3 float-left'>
+                Retour
               </Link>
             </div>
-            <div className="col-md-6" />
           </div>
-          <ProfileHeader profile={profile} />
-          <ProfileAbout profile={profile} />
-          <ProfileCreds
-            education={profile.education}
-            experience={profile.experience}
-          />
-          {profile.githubusername ? (
-            <ProfileGithub username={profile.githubusername} />
-          ) : null}
+          <div className='col-md-12 jumbotron'>
+            <ProfileHeader profile={profile} />
+            <ProfileAbout profile={profile} />
+            <ProfileCreds
+              education={profile.education}
+              experience={profile.experience}
+            />
+            {profile.githubusername ? (
+              <ProfileGithub username={profile.githubusername} />
+            ) : null}
+          </div>
         </div>
       );
     }
 
     return (
-      <div className="profile">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">{profileContent}</div>
+      <div className='profile'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-12'>{profileContent}</div>
           </div>
         </div>
       </div>

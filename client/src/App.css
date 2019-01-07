@@ -44,6 +44,11 @@ img {
   border-radius: 0.2rem;
 }
 
+.blue-fb-on {
+  color: #fff;
+  background-color: #3b5998;
+}
+
 .blue-fb {
   color: #fff;
   background-color: #3b5998;

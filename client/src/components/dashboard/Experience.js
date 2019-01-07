@@ -11,59 +11,38 @@ class Experience extends Component {
 
   render() {
     const experience = this.props.experience.map(exp => (
-      // <tr key={exp._id}>
-      //   <td>{exp.company}</td>
-      //   <td>{exp.title}</td>
-      //   <td>
-      //     <Moment format="YYYY/MM/DD">{exp.from}</Moment>-{" "}
-      //     {exp.to === null ? (
-      //       " Now"
-      //     ) : (
-      //       <Moment format="YYYY/MM/DD">{exp.to}</Moment>
-      //     )}
-      //   </td>
-      //   <td>
-      //     <button
-      //       onClick={this.onDeleteClick.bind(this, exp._id)}
-      //       className="btn btn-danger"
-      //     >
-      //       Delete
-      //     </button>
-      //   </td>
-      // </tr>
-
-      <div className="row mb-4 p-1 bg-white fb-border">
-        <div class="col-sm-4 p-1">
-          <h5 className="fb-title">Company</h5>
+      <div key={exp._id} className='row mb-4 p-1 bg-white fb-border'>
+        <div className='col-sm-4 p-1'>
+          <h5 className='fb-title'>Entreprise</h5>
           <hr />
           <p>{exp.company}</p>
         </div>
-        <div className="col-sm-4 p-1">
-          <h5 className="fb-title">Title</h5>
+        <div className='col-sm-4 p-1'>
+          <h5 className='fb-title'>Emploi</h5>
           <hr />
           <p>{exp.title}</p>
         </div>
-        <div className="col-sm-4 p-1">
-          <h5 className="fb-title">Years</h5>
+        <div className='col-sm-4 p-1'>
+          <h5 className='fb-title'>Année</h5>
           <hr />
-          <Moment format="YYYY/MM/DD">{exp.from}</Moment>-{" "}
+          <Moment format='YYYY/MM/DD'>{exp.from}</Moment>-{" "}
           {exp.to === null ? (
             " Now"
           ) : (
-            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+            <Moment format='YYYY/MM/DD'>{exp.to}</Moment>
           )}
         </div>
-        <div className="col-sm-12">
+        <div className='col-sm-12'>
           <button
             onClick={this.onDeleteClick.bind(this, exp._id)}
-            className="btn blue-fb m-4 m-auto"
+            className='btn blue-fb m-4 m-auto'
           >
             Delete
           </button>
         </div>
       </div>
     ));
-    return <div class="container ">{experience}</div>;
+    return <div className='container '>{experience}</div>;
   }
 }
 

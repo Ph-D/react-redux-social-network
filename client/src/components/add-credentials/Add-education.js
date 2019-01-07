@@ -62,83 +62,85 @@ class AddEducation extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="add-education">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <Link to="/dashboard" className="btn btn-ligth">
-                Go Back
+      <div className='add-education'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-md-8 m-auto jumbotron'>
+              <Link to='/dashboard' className='btn btn-light fb-border mb-3'>
+                Retour
               </Link>
-              <h1 className="display-4 text-center">Add Education</h1>
-              <p className="lead text-center">
-                Add any school, bootcamp, etc that you have attended
+              <h1 className='font-weight-bold fb-title text-center mb-5'>
+                Ajouter votre parcours
+              </h1>
+              <p className='lead text-center'>
+                Ajouter vos différents parcours, formation, stage
               </p>
-              <small className="d-block pb-3">*= required fields</small>
+              <small className='d-block pb-3'>*= champs requis</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
-                  placeholder="School"
-                  name="school"
+                  placeholder='École'
+                  name='school'
                   value={this.state.school}
                   onChange={this.onChange}
                   error={errors.school}
                 />
                 <TextFieldGroup
-                  placeholder="Degree or Certification"
-                  name="degree"
+                  placeholder='Diplôme ou certification'
+                  name='degree'
                   value={this.state.degree}
                   onChange={this.onChange}
                   error={errors.degree}
                 />
                 <TextFieldGroup
-                  placeholder="* Field of Study"
-                  name="fieldofstudy"
+                  placeholder='* Domaine de formation'
+                  name='fieldofstudy'
                   value={this.state.fieldofstudy}
                   onChange={this.onChange}
                   error={errors.fieldofstudy}
                 />
-                <h6>From Date</h6>
+                <h6>À partir de </h6>
                 <TextFieldGroup
-                  name="from"
-                  type="date"
+                  name='from'
+                  type='date'
                   value={this.state.from}
                   onChange={this.onChange}
                   error={errors.from}
                 />
-                <h6>To Date</h6>
+                <h6>Jusqu'au</h6>
                 <TextFieldGroup
-                  name="to"
-                  type="date"
+                  name='to'
+                  type='date'
                   value={this.state.to}
                   onChange={this.onChange}
                   error={errors.to}
                   disabled={this.state.disabled ? "disabled" : ""}
                 />
-                <div className="form-check mb-4">
+                <div className='form-check mb-4'>
                   <input
-                    type="checkbox"
-                    className="form-check-input"
-                    name="current"
+                    type='checkbox'
+                    className='form-check-input'
+                    name='current'
                     value={this.state.current}
                     checked={this.state.current}
                     onChange={this.onCheck}
-                    id="current"
+                    id='current'
                   />
-                  <label htmlFor="current" className="form-check-label">
-                    Current Job
+                  <label htmlFor='current' className='form-check-label'>
+                    Position actuelle
                   </label>
                 </div>
                 <TextAreaFieldGroup
-                  placeholder="Program Descritpion"
-                  name="description"
+                  placeholder='Descriptif parcours'
+                  name='description'
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the program that you were in"
+                  info='Décrivez votre parcours de formation'
                 />
                 <input
-                  type="submit"
-                  value="Submit"
-                  className="btn btn-info btn-block mt-4"
+                  type='submit'
+                  value='Valider'
+                  className='btn blue-fb btn-block mt-4'
                 />
               </form>
             </div>

@@ -46,24 +46,22 @@ class CommentForm extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="post-form mb-3">
-        <div className="card card-info">
-          <div className="card-header bg-info text-white">
-            Make a comment...
-          </div>
-          <div className="card-body">
+      <div className='post-form mb-3'>
+        <div className='card card-info'>
+          <div className='card-header blue-fb-on text-white'>Commentez...</div>
+          <div className='card-body'>
             <form onSubmit={this.onSubmit}>
-              <div className="form-group">
+              <div className='form-group'>
                 <TextAreaFieldGroup
-                  placeholder="Reply to post"
-                  name="text"
+                  placeholder='Répondre'
+                  name='text'
                   value={this.state.text}
                   onChange={this.onChange}
                   error={errors.text}
                 />
               </div>
-              <button type="submit" className="btn btn-dark">
-                Submit
+              <button type='submit' className='btn blue-fb'>
+                Valider
               </button>
             </form>
           </div>

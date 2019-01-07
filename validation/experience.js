@@ -9,15 +9,15 @@ module.exports = function validateExperienceInput(data) {
   data.from = !isEmpty(data.from) ? data.from : "";
 
   if (Validator.isEmpty(data.title)) {
-    errors.title = "Job title field is required";
+    errors.title = "Précisez intitulé du poste";
   }
 
   if (Validator.isEmpty(data.company)) {
-    errors.company = "Company field is required";
+    errors.company = "Précisez entreprise";
   }
 
   if (Validator.isEmpty(data.from)) {
-    errors.from = "From date field is required";
+    errors.from = "Précisez date de début";
   }
 
   return {
