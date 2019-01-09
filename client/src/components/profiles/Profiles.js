@@ -30,7 +30,7 @@ class Profiles extends Component {
       <div className='profiles'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-12 m-auto jumbotron jumbo'>
+            <div className='col-md-12 m-auto fb-grey'>
               <h1 className='display-5 font-weight-bold fb-title text-center'>
                 Développeurs
               </h1>

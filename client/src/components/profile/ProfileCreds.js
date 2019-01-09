@@ -11,7 +11,7 @@ class ProfileCreds extends Component {
         <p>
           <Moment format='YYYY/MM/DD'>{exp.from}</Moment> -
           {exp.to === null ? (
-            " NOW "
+            " Aujourd'hui "
           ) : (
             <Moment format='YYYY/MM/DD'>{exp.to}</Moment>
           )}
@@ -42,7 +42,7 @@ class ProfileCreds extends Component {
         <p>
           <Moment format='YYYY/MM/DD'>{edu.from}</Moment> -
           {edu.to === null ? (
-            " NOW "
+            " Aujourd'hui "
           ) : (
             <Moment format='YYYY/MM/DD'>{edu.to}</Moment>
           )}
@@ -66,7 +66,7 @@ class ProfileCreds extends Component {
     return (
       <div className='row'>
         <div className='col-md-6 mb-3'>
-          <h3 className='text-center fb-title'>Experience</h3>
+          <h3 className='text-center fb-title'>Expérience</h3>
           {expItems.length > 0 ? (
             <ul className='list-group'>{expItems}</ul>
           ) : (

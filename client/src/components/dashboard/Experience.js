@@ -35,9 +35,10 @@ class Experience extends Component {
         <div className='col-sm-12'>
           <button
             onClick={this.onDeleteClick.bind(this, exp._id)}
-            className='btn blue-fb m-4 m-auto'
+            type='button'
+            className='btn btn-danger '
           >
-            Delete
+            <i className='fas fa-times' />
           </button>
         </div>
       </div>

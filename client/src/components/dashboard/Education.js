@@ -35,9 +35,10 @@ class Education extends Component {
         <div className='col-sm-12'>
           <button
             onClick={this.onDeleteClick.bind(this, edu._id)}
-            className='btn blue-fb m-4 m-auto'
+            type='button'
+            className='btn btn-danger mr-1'
           >
-            Delete
+            <i className='fas fa-times' />
           </button>
         </div>
       </div>

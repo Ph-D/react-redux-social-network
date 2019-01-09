@@ -91,7 +91,7 @@ class CreateProfile extends Component {
           />
           <InputGroup
             placeholder='Linkedin URL'
-            name='linkedim'
+            name='linkedin'
             icon='fab fa-linkedin'
             value={this.state.linkedin}
             onChange={this.onChange}
@@ -135,7 +135,7 @@ class CreateProfile extends Component {
       <div className='create-profile'>
         <div className='container'>
           <div className='row' />
-          <div className='col-md-8 m-auto jumbotron'>
+          <div className='col-md-8 m-auto fb-grey'>
             <h1 className='font-weight-bold fb-title text-center mb-5'>
               Créez votre Profil
             </h1>
@@ -143,7 +143,7 @@ class CreateProfile extends Component {
             <small className='d-block pb-3'>* = champs requis</small>
             <form onSubmit={this.onSubmit}>
               <TextFieldGroup
-                placeholder='* Nom profil page'
+                placeholder='* Profil page'
                 name='handle'
                 value={this.state.handle}
                 onChange={this.onChange}

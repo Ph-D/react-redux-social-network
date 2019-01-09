@@ -38,7 +38,7 @@ class Profile extends Component {
               </Link>
             </div>
           </div>
-          <div className='col-md-12 jumbotron'>
+          <div className='col-md-12 fb-grey'>
             <ProfileHeader profile={profile} />
             <ProfileAbout profile={profile} />
             <ProfileCreds

@@ -72,6 +72,18 @@ img {
   color: white;
 }
 
+.fb-grey {
+  background-color: #f7f7f7;
+  padding: 3vw;
+  border-radius: 0.2rem;
+}
+
+.fb-grey {
+  background-color: #fff;
+  padding: 3vw;
+  border-radius: 0.2rem;
+}
+
 .register,
 .login,
 .dashboard {

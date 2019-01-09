@@ -65,7 +65,7 @@ class AddExperience extends Component {
       <div className='add-experience'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-8 m-auto jumbotron'>
+            <div className='col-md-8 m-auto fb-grey'>
               <Link to='/dashboard' className='btn btn-light fb-border'>
                 Retour
               </Link>
@@ -101,7 +101,7 @@ class AddExperience extends Component {
                 <h6>A partir du</h6>
                 <TextFieldGroup
                   name='from'
-                  type='date'
+                  type='Date'
                   value={this.state.from}
                   onChange={this.onChange}
                   error={errors.from}

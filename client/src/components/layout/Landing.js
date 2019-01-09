@@ -18,8 +18,8 @@ class Landing extends Component {
               <div className='container'>
                 <h1
                   style={{
-                    "border-bottom": "5px solid #3b5998",
-                    "padding-bottom": "15px"
+                    borderBottom: "5px solid #3b5998",
+                    paddingBottom: "15px"
                   }}
                   className='jumbotron-heading font-weight-bold fb-title'
                 >
@@ -30,7 +30,7 @@ class Landing extends Component {
                   Réseau social pour développeurs.
                 </p>
                 <p>
-                  <Link to='/register' class='btn btn-lg blue-fb my-2 mr-2'>
+                  <Link to='/register' className='btn btn-lg blue-fb my-2 mr-2'>
                     Inscription
                   </Link>
                   <Link

@@ -8,16 +8,16 @@ class ProfileItem extends Component {
     const { profile } = this.props;
     return (
       <div className='card'>
-        <img src={profile.user.avatar} alt='' className='rounded-circle p-5' />
+        <img src={profile.user.avatar} alt='' className='rounded p-1' />
         <div className='card-body'>
-          <h5>{profile.user.name}</h5>
+          <h5 className='fb-title'>{profile.user.name}</h5>
           <p>
             {profile.status}
             {isEmpty(profile.company) ? null : (
-              <span> a {profile.company}</span>
+              <span> à {profile.company}</span>
             )}
           </p>
-          <p>
+          <p className='font-weight-bold'>
             {isEmpty(profile.location) ? null : <span>{profile.location}</span>}
           </p>
         </div>

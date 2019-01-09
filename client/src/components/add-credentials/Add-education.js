@@ -65,7 +65,7 @@ class AddEducation extends Component {
       <div className='add-education'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-8 m-auto jumbotron'>
+            <div className='col-md-8 m-auto fb-grey'>
               <Link to='/dashboard' className='btn btn-light fb-border mb-3'>
                 Retour
               </Link>

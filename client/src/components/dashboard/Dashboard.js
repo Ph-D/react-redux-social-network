@@ -7,6 +7,7 @@ import Spinner from "../common/Spinner";
 import ProfileActions from "./ProfileActions";
 import Experience from "./Experience";
 import Education from "./Education";
+import isEmpty from "../../validation/is-empty";
 
 class Dashboard extends Component {
   componentDidMount() {
@@ -35,11 +36,18 @@ class Dashboard extends Component {
             </p>
             <ProfileActions />
             <h4 className='mb-4'>Expériences Profesionnelles</h4>
-            <Experience experience={profile.experience} />
+            {isEmpty(profile.experience) ? (
+              <p>Pas d'expériences listées</p>
+            ) : (
+              <Experience experience={profile.experience} />
+            )}
             <h4 className='mb-4'>Parcours</h4>
 
-            <Education education={profile.education} />
-
+            {isEmpty(profile.education) ? (
+              <p>Pas de parcours listés</p>
+            ) : (
+              <Education education={profile.education} />
+            )}
             <div style={{ marginBottom: "60px" }} />
             <button
               onClick={this.onDeleteClick.bind(this)}
@@ -69,7 +77,7 @@ class Dashboard extends Component {
       <div className='dashboard'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-12 m-auto jumbotron text-center'>
+            <div className='col-md-12 m-auto fb-grey text-center'>
               <h1 className='display-5 font-weight-bold fb-title text-center'>
                 Dashboard
               </h1>

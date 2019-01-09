@@ -31,12 +31,12 @@ class PostItem extends Component {
     const { post, auth, showActions } = this.props;
 
     return (
-      <div className='card card-body mb-3'>
+      <div className='card card-body mb-3 fb-grey'>
         <div className='row'>
           <div className='col-md-2'>
             <a href='profile.html'>
               <img
-                className='rounded-circle d-none d-md-block'
+                className='rounded d-none d-md-block'
                 src={post.avatar}
                 alt=''
               />
