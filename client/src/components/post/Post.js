@@ -29,11 +29,11 @@ class Post extends Component {
       );
     }
     return (
-      <div className='post'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12'>
-              <Link to='/feed' className='btn btn-light fb-border mb-3'>
+      <div className="post">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 fb-grey">
+              <Link to="/feed" className="btn btn-light fb-border mb-3">
                 Retour
               </Link>
               {postContent}

@@ -27,15 +27,15 @@ class Profiles extends Component {
     }
 
     return (
-      <div className='profiles'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12 m-auto fb-grey'>
-              <h1 className='display-5 font-weight-bold fb-title text-center'>
+      <div className="profiles">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 m-auto fb-grey">
+              <h1 className="display-5 font-weight-bold fb-title text-center">
                 Développeurs
               </h1>
-              <p className='lead text-center'>Parcourir les profils</p>
-              <div className='card-columns'>{profileItems}</div>
+              <p className="lead text-center">Parcourir les profils</p>
+              <div className="card-columns">{profileItems}</div>
             </div>
           </div>
         </div>

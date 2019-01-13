@@ -31,14 +31,14 @@ class Profile extends Component {
     } else {
       profileContent = (
         <div>
-          <div className='row'>
-            <div className='col-md-6'>
-              <Link to='/profiles' className='btn btn-light mb-3 float-left'>
+          <div className="row">
+            <div className="col-md-6">
+              <Link to="/profiles" className="btn btn-light mb-3 float-left">
                 Retour
               </Link>
             </div>
           </div>
-          <div className='col-md-12 fb-grey'>
+          <div className="col-md-12">
             <ProfileHeader profile={profile} />
             <ProfileAbout profile={profile} />
             <ProfileCreds
@@ -54,10 +54,10 @@ class Profile extends Component {
     }
 
     return (
-      <div className='profile'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-12'>{profileContent}</div>
+      <div className="profile">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 fb-grey">{profileContent}</div>
           </div>
         </div>
       </div>

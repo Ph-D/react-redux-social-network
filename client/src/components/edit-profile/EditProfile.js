@@ -124,41 +124,41 @@ class EditProfile extends Component {
       socialInputs = (
         <div>
           <InputGroup
-            placeholder='Twitter URL'
-            name='twitter'
-            icon='fab fa-twitter'
+            placeholder="Twitter URL"
+            name="twitter"
+            icon="fab fa-twitter"
             value={this.state.twitter}
             onChange={this.onChange}
             error={errors.twitter}
           />
           <InputGroup
-            placeholder='Facebook URL'
-            name='facebook'
-            icon='fab fa-facebook'
+            placeholder="Facebook URL"
+            name="facebook"
+            icon="fab fa-facebook"
             value={this.state.facebook}
             onChange={this.onChange}
             error={errors.facebook}
           />
           <InputGroup
-            placeholder='Linkedin URL'
-            name='linkedim'
-            icon='fab fa-linkedin'
+            placeholder="Linkedin URL"
+            name="linkedim"
+            icon="fab fa-linkedin"
             value={this.state.linkedin}
             onChange={this.onChange}
             error={errors.linkedin}
           />
           <InputGroup
-            placeholder='YouTube URL'
-            name='youtube'
-            icon='fab fa-youtube'
+            placeholder="YouTube URL"
+            name="youtube"
+            icon="fab fa-youtube"
             value={this.state.youtube}
             onChange={this.onChange}
             error={errors.youtube}
           />
           <InputGroup
-            placeholder='Instagram URL'
-            name='instagram'
-            icon='fab fa-instagram'
+            placeholder="Instagram URL"
+            name="instagram"
+            icon="fab fa-instagram"
             value={this.state.instagram}
             onChange={this.onChange}
             error={errors.instagram}
@@ -181,106 +181,109 @@ class EditProfile extends Component {
     ];
 
     return (
-      <div className='create-profile'>
-        <div className='container'>
-          <div className='row' />
-          <div className='col-md-8 m-auto fb-grey'>
-            <Link to='/dashboard' className='btn btn-light fb-border mb-3'>
-              Retour
-            </Link>
+      <div className="create-profile">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12 fb-grey">
+              <Link to="/dashboard" className="btn btn-light fb-border mb-3">
+                Retour
+              </Link>
 
-            <h1 className='font-weight-bold fb-title text-center mb-5'>
-              Éditez votre profil
-            </h1>
-            <p className='lead text-center'>Merci de renseigner les champs.</p>
-            <small className='d-block pb-3'>* = champs requis</small>
-            <form onSubmit={this.onSubmit}>
-              <TextFieldGroup
-                placeholder='* Nom Profil'
-                name='handle'
-                value={this.state.handle}
-                onChange={this.onChange}
-                error={errors.handle}
-                info="Ce champ sera utilisé pour générer l'url de votre profil"
-              />
-              <SelectListGroup
-                placeholder='Status'
-                name='status'
-                value={this.state.status}
-                onChange={this.onChange}
-                options={options}
-                error={errors.status}
-                info='Position actuelle'
-              />
-              <TextFieldGroup
-                placeholder='Entreprise'
-                name='company'
-                value={this.state.company}
-                onChange={this.onChange}
-                error={errors.company}
-              />
-              <TextFieldGroup
-                placeholder='Website'
-                name='website'
-                value={this.state.website}
-                onChange={this.onChange}
-                error={errors.website}
-                info='Website ou Portfolio'
-              />
-              <TextFieldGroup
-                placeholder='Lieu'
-                name='location'
-                value={this.state.location}
-                onChange={this.onChange}
-                error={errors.location}
-                info='Ville ou Pays'
-              />
-              <TextFieldGroup
-                placeholder='Compétences'
-                name='skills'
-                value={this.state.skills}
-                onChange={this.onChange}
-                error={errors.skills}
-                info='Ajouter une virgule entre chaque compétence'
-              />
-              <TextFieldGroup
-                placeholder='Nom utilisateur Github'
-                name='githubusername'
-                value={this.state.githubusername}
-                onChange={this.onChange}
-                error={errors.githubusername}
-                info='Pour afficher vos derniers Github repos'
-              />
-              <TextAreaFieldGroup
-                placeholder='Description'
-                name='bio'
-                value={this.state.bio}
-                onChange={this.onChange}
-                error={errors.bio}
-                info='Décrivez vous'
-              />
+              <h1 className="font-weight-bold fb-title text-center mb-5">
+                Éditez votre profil
+              </h1>
+              <p className="lead text-center">
+                Merci de renseigner les champs.
+              </p>
+              <small className="d-block pb-3">* = champs requis</small>
+              <form onSubmit={this.onSubmit}>
+                <TextFieldGroup
+                  placeholder="* Nom Profil"
+                  name="handle"
+                  value={this.state.handle}
+                  onChange={this.onChange}
+                  error={errors.handle}
+                  info="Ce champ sera utilisé pour générer l'url de votre profil"
+                />
+                <SelectListGroup
+                  placeholder="Status"
+                  name="status"
+                  value={this.state.status}
+                  onChange={this.onChange}
+                  options={options}
+                  error={errors.status}
+                  info="Position actuelle"
+                />
+                <TextFieldGroup
+                  placeholder="Entreprise"
+                  name="company"
+                  value={this.state.company}
+                  onChange={this.onChange}
+                  error={errors.company}
+                />
+                <TextFieldGroup
+                  placeholder="Website"
+                  name="website"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  error={errors.website}
+                  info="Website ou Portfolio"
+                />
+                <TextFieldGroup
+                  placeholder="Lieu"
+                  name="location"
+                  value={this.state.location}
+                  onChange={this.onChange}
+                  error={errors.location}
+                  info="Ville ou Pays"
+                />
+                <TextFieldGroup
+                  placeholder="Compétences"
+                  name="skills"
+                  value={this.state.skills}
+                  onChange={this.onChange}
+                  error={errors.skills}
+                  info="Ajouter une virgule entre chaque compétence"
+                />
+                <TextFieldGroup
+                  placeholder="Nom utilisateur Github"
+                  name="githubusername"
+                  value={this.state.githubusername}
+                  onChange={this.onChange}
+                  error={errors.githubusername}
+                  info="Pour afficher vos derniers Github repos"
+                />
+                <TextAreaFieldGroup
+                  placeholder="Description"
+                  name="bio"
+                  value={this.state.bio}
+                  onChange={this.onChange}
+                  error={errors.bio}
+                  info="Décrivez vous"
+                />
 
-              <div className='mb-3'>
-                <button
-                  type='button'
-                  onClick={() => {
-                    this.setState(prevState => ({
-                      displaySocialInputs: !prevState.displaySocialInputs
-                    }));
-                  }}
-                  className='btn btn-light'
-                >
-                  Ajoutez vos réseaux sociaux
-                </button>
-                <span className='text-muted'> Optionnel</span>
-              </div>
-              {socialInputs}
-              <input
-                type='submit'
-                value='Valider'
-                className='btn blue-fb btn-block mt-4'
-              />
-            </form>
+                <div className="mb-3">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      this.setState(prevState => ({
+                        displaySocialInputs: !prevState.displaySocialInputs
+                      }));
+                    }}
+                    className="btn btn-light"
+                  >
+                    Ajoutez vos réseaux sociaux
+                  </button>
+                  <span className="text-muted"> Optionnel</span>
+                </div>
+                {socialInputs}
+                <input
+                  type="submit"
+                  value="Valider"
+                  className="btn blue-fb btn-block mt-4"
+                />
+              </form>
+            </div>
           </div>
         </div>
       </div>
